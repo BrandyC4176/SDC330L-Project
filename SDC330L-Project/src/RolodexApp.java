@@ -4,8 +4,7 @@
  * Date: 10/09/25
  * Purpose: Main entry point for the Rolodex Application.
  * Prints a header, a welcome message, and a simple menu.
- * Demonstrates inheritance (Contact → BusinessContact, FamilyContact, FriendContact)
- * and composition (Contacts include Address and Company objects).
+ * Demonstrates inheritance and composition
  */
 
 import java.util.*;
@@ -102,7 +101,7 @@ public class RolodexApp {
 
     // Prints all contacts
     private static void displayAll() {
-        System.out.println("\n--- All Contacts ---");
+        System.out.println("--- All Contacts ---");
         if (CONTACTS.isEmpty()) {
             System.out.println("No contacts yet.");
         } else {
