@@ -1,13 +1,13 @@
 /*
 * Author: Brandy Christopher
  * SDC330L Project
- * Date: 10/09/25
+ * Date: 10/19/25
  * Purpose: Represents a friend contact.
  * Inherits from Contact and adds a short note about how you know the person.
  */
 
 public class FriendContact extends Contact {
-    private String howWeMet;
+    private String howWeMet; // e.g., College, Neighbor
 
     public FriendContact(String firstName, String lastName, String phone, String email,
                          Address address, String howWeMet) {
@@ -16,11 +16,13 @@ public class FriendContact extends Contact {
     }
 
     @Override
-    public String getType() { return "Friend"; }
+    public String getType() {
+        return "Friend";
+    }
 
     @Override
-    public String summary() {
-        String base = super.summary();
+    public String toDisplayString() {
+        String base = super.toDisplayString();
         String extra = (howWeMet != null && !howWeMet.isBlank()) ? " | Met through: " + howWeMet : "";
         return base + extra;
     }

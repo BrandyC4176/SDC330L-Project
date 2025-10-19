@@ -1,7 +1,7 @@
 /*
 * Author: Brandy Christopher
  * SDC330L Project
- * Date: 10/09/25
+ * Date: 10/18/25
  * Purpose: Represents an address.
  * Used through composition by Contact classes.
  */
@@ -14,9 +14,9 @@ public class Address {
 
     public Address(String street, String city, String state, String zip) {
         this.street = street;
-        this.city = city;
-        this.state = state;
-        this.zip = zip;
+        this.city   = city;
+        this.state  = state;
+        this.zip    = zip;
     }
 
     @Override
