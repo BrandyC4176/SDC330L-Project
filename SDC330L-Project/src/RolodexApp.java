@@ -4,10 +4,10 @@
  * Date: 10/19/25
 * Purpose: Main entry point for the Rolodex application (WEEK 2).
  * - Displays Week 2 header & welcome/instructions.
- * - Demonstrates INTERFACE via Displayable.
+ * - Demonstrates INTERFACE via Interface.
  * - Demonstrates POLYMORPHISM by:
- *     (a) treating Business/Family/Friend as Contact and Displayable
- *     (b) rendering a mixed List<Displayable> (Contacts + Companies)
+ *     (a) treating Business/Family/Friend as Contact and Interface
+ *     (b) rendering a mixed List<Interface> (Contacts + Companies)
  * - Reuses Week 1 inheritance/composition classes.
  */
 
@@ -58,8 +58,8 @@ public class RolodexApp {
     }
 
     private static void printWelcome() {
-        System.out.println("Welcome! This demo builds on Week 1 and shows an interface (Displayable)");
-        System.out.println("and polymorphism using both the Contact hierarchy and a mixed Displayable list.\n");
+        System.out.println("Welcome! This demo builds on Week 1 and shows an interface (Interface)");
+        System.out.println("and polymorphism using both the Contact hierarchy and a mixed Interface list.\n");
         System.out.println("Instructions:");
         System.out.println("  - Choose an option to view contacts in different ways.");
         System.out.println("  - Option 3 mixes Contacts and Companies to show interface-based polymorphism.\n");
@@ -69,7 +69,7 @@ public class RolodexApp {
         System.out.println("Menu:");
         System.out.println("  1) Display ALL Contacts");
         System.out.println("  2) Display Contacts by TYPE (Business/Family/Friend)");
-        System.out.println("  3) Display DIRECTORY (mixed Displayable: Contacts + Companies)");
+        System.out.println("  3) Display DIRECTORY (mixed Interface: Contacts + Companies)");
         System.out.println("  4) Exit");
         System.out.print("Enter your choice: ");
     }
@@ -117,14 +117,14 @@ public class RolodexApp {
     }
 
     private static void displayDirectoryView() {
-        System.out.println("\n--- Directory (Displayable polymorphism) ---");
+        System.out.println("\n--- Directory (Interface polymorphism) ---");
 
-        List<Displayable> items = new ArrayList<>();
+        List<Interface> items = new ArrayList<>();
         items.addAll(REPO.getAll());
         items.add(new Company("Coastal Freight", "757-555-2200"));
         items.add(new Company("Peninsula Health", "757-555-3344"));
 
-        for (Displayable d : items) {
+        for (Interface d : items) {
             System.out.println(d.toDisplayString());
         }
         System.out.println();

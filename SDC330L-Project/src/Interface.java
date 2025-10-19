@@ -5,7 +5,8 @@
  * Purpose: Interface to standardize how objects render a single-line display string.
  */
 
-public interface Displayable {
+
+public interface Interface {
     // INTERFACE: Any implementing class must provide a UI-friendly single-line string.
     String toDisplayString();
 }

@@ -7,7 +7,7 @@
  * Also shows composition since each Contact has an Address.
  */
 
-public abstract class Contact implements Displayable {
+public abstract class Contact implements Interface {
     protected String firstName;
     protected String lastName;
     protected String phone;
@@ -31,7 +31,7 @@ public abstract class Contact implements Displayable {
     // Each subclass identifies its own type (Business, Family, Friend)
     public abstract String getType();
 
-    // INTERFACE IMPLEMENTATION: Displayable
+    // INTERFACE IMPLEMENTATION: Interface
     @Override
     public String toDisplayString() {
         String addr = (address != null ? address.toString() : "No Address");

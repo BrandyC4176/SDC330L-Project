@@ -6,7 +6,7 @@
  * Used as part of a BusinessContact to show composition.
  */
 
-public class Company implements Displayable {
+public class Company implements Interface {
     private String name;
     private String mainPhone;
 
@@ -15,7 +15,7 @@ public class Company implements Displayable {
         this.mainPhone = mainPhone;
     }
 
-    // INTERFACE IMPLEMENTATION: Displayable
+    // INTERFACE IMPLEMENTATION: Interface
     @Override
     public String toDisplayString() {
         return String.format("%s (Main: %s)", name, mainPhone);
